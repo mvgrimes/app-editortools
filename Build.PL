@@ -7,8 +7,8 @@ my $build = Module::Build->new(
     create_makefile_pl => 'passthrough',
     script_files       => [qw(script/editortools-vim)],
     requires           => {
-        'perl' => '5.010',
-        'PPI'  => 0,
+        'perl'              => '5.008',
+        'PPIx::EditorTools' => 0,
     },
     build_requires => {
         'Test::Differences' => 0,

@@ -1,0 +1,20 @@
+Build.PL
+INSTALL
+lib/App/EditorTools.pm
+lib/App/EditorTools/Command/RenamePackage.pm
+lib/App/EditorTools/Command/RenamePackageFromPath.pm
+lib/App/EditorTools/Command/RenameVariable.pm
+MANIFEST			This list of files
+META.yml
+README
+samples/lexvarrepl.gif
+samples/test.pm
+script/editortools-vim
+t/00-use.t
+t/10-run.t
+xt/95-prereq.t
+xt/96-kwalitee.t
+xt/97-critic.t
+xt/98-pod.t
+xt/99-podcoverage.t
+xt/perlcriticrc

@@ -20,8 +20,9 @@ sub run {
     my $doc_as_str = join( "", <STDIN> );
 
     require PPIx::EditorTools::RenamePackageFromPath;
-    print PPIx::EditorTools::RenamePackageFromPath->new( code => $doc_as_str, )
-      ->rename( filename => $opt->{filename} )->serialize;
+    print PPIx::EditorTools::RenamePackageFromPath->new->rename(
+        code     => $doc_as_str,
+        filename => $opt->{filename} )->code;
 }
 
 1;

@@ -26,12 +26,12 @@ sub run {
     my $doc_as_str = join( "", <STDIN> );
 
     require PPIx::EditorTools::RenameVariable;
-    print PPIx::EditorTools::RenameVariable->new( code => $doc_as_str )
-      ->replace_var(
+    print PPIx::EditorTools::RenameVariable->new->rename(
+        code        => $doc_as_str,
         column      => $opt->{column},
         line        => $opt->{line},
         replacement => $opt->{replacement},
-      )->serialize;
+    )->code;
 }
 
 1;

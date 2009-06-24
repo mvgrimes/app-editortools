@@ -14,6 +14,15 @@ my $build = Module::Build->new(
         'Test::Differences' => 0,
         'IPC::Run3'         => 0,
     },
+
+    meta_merge => {
+        resources => {
+            bugtracker =>
+              'http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-EditorTools',
+            repository =>
+              'http://github.com/mvgrimes/app-editortools/tree/master'
+        }
+    },
 );
 
 $build->create_build_script;

@@ -4,5 +4,6 @@ Makefile.PL
 Makefile
 _build/
 blib/
-App-EditorTools-*.tar*
+App-EditorTools*
 lib/PPIx
+Changes

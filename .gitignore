@@ -7,3 +7,4 @@ blib/
 App-EditorTools*
 lib/PPIx
 Changes
+*.swp

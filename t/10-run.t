@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 4;
+use Test::More tests => 6;
 use Test::Differences;
 use IPC::Run3;
 
@@ -39,3 +39,12 @@ CODE
     like( $out, qr/shiny/, 'RenameVariable' );
 }
 
+{
+    my $in = <<'CODE';
+my $x = 1 + (10 / 12) + 15;
+my $x = 3 + (10 / 12) + 17;
+CODE
+    my $cmd = qq{$script introducetemporaryvariable -s 1,13 -e 1,21 -v foo};
+    ok( run3( $cmd, \$in, \$out ), $cmd );
+    like( $out, qr/my \$foo = \(10 \/ 12\)/, 'IntroduceTempVar' );
+}

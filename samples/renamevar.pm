@@ -9,7 +9,7 @@ class Test {
         my $x_var = 1;
 
         say "Do stuff with ${x_var}";
-        $x_var += 1;
+        $x_var += 2;
 
         my %hash;
         for my $i (1..5) {

@@ -1,14 +1,25 @@
 Build.PL
+Changes
 INSTALL
 lib/App/EditorTools.pm
+lib/App/EditorTools/Command/IntroduceTemporaryVariable.pm
 lib/App/EditorTools/Command/RenamePackage.pm
 lib/App/EditorTools/Command/RenamePackageFromPath.pm
 lib/App/EditorTools/Command/RenameVariable.pm
+lib/App/EditorTools/Vim.pm
+Makefile
+Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
+samples/introtempvar.pl
 samples/lexvarrepl.gif
+samples/lib/New/Package/Name.pm
+samples/renamevar.pm
 samples/test.pm
+samples/vim-introtempvar.gif
+samples/vim-renamepackage.gif
+samples/vim-renamevar.gif
 script/editortools-vim
 t/00-use.t
 t/10-run.t
@@ -18,4 +29,3 @@ xt/97-critic.t
 xt/98-pod.t
 xt/99-podcoverage.t
 xt/perlcriticrc
-Makefile.PL

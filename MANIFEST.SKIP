@@ -9,3 +9,4 @@
 \.git/
 ^lib/PPIx$
 ^.gitignore$
+App-EditorTools*

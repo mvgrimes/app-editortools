@@ -13,10 +13,8 @@ MANIFEST			This list of files
 META.yml
 README
 samples/introtempvar.pl
-samples/lexvarrepl.gif
 samples/lib/New/Package/Name.pm
 samples/renamevar.pm
-samples/test.pm
 samples/vim-introtempvar.gif
 samples/vim-renamepackage.gif
 samples/vim-renamevar.gif

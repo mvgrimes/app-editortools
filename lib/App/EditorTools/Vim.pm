@@ -58,13 +58,20 @@ at your option, any later version of Perl 5 you may have available.
 
 =cut
 
+our $VERSION = '0.04';
+
 sub run {
+    print <<END_INTRO;
+" App::EditorTools::Vim generated script
+" Version: $VERSION
+END_INTRO
     print while (<DATA>);
 }
 
 1;
 
 __DATA__
+
 map ,pp :call EditorToolsMenu()<cr>
 map ,pL :call RenameVariable()<cr>
 map ,pP :call RenamePackageFromPath()<cr>
@@ -126,7 +133,10 @@ function! IntroduceTemporaryVariable() range
     call Exec_command_and_replace_buffer( cmd )
 endfunction
 
-" Utility function
+" Utility functions -------------
+
+" Execute a command using the shell and replace the entire buffer
+" with the retuned contents. TODO: Needs error handling
 function! Exec_command_and_replace_buffer(command)
     " echo a:command
 
@@ -136,3 +146,22 @@ function! Exec_command_and_replace_buffer(command)
     call setline( 1, result )
 endfunction
 
+" Ovid's function to implement a simple menu
+function! PickFromList( name, list, ... )
+    let forcelist = a:0 && a:1 ? 1 : 0
+
+    if 1 == len(a:list) && !forcelist
+        let choice = 0
+    else
+        let lines = [ 'Choose a '. a:name . ':' ]
+            \ + map(range(1, len(a:list)), 'v:val .": ". a:list[v:val - 1]')
+        let choice  = inputlist(lines)
+        if choice > 0 && choice <= len(a:list)
+            let choice = choice - 1
+        else
+            let choice = choice - 1
+        endif
+    end
+
+    return a:list[choice]
+endfunction

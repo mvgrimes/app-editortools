@@ -10,6 +10,7 @@ my $build = Module::Build->new(
         'perl'              => '5.008',
         'PPIx::EditorTools' => 0,
         'App::Cmd'          => 0,
+        'FindBin::libs'     => 0,
     },
     build_requires => {
         'Test::Differences' => 0,

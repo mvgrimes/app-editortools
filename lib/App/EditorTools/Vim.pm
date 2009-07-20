@@ -16,7 +16,7 @@ C<$HOME/.vim/ftplugin/perl/editortools.vim>
 
     perl -MApp::EditorTools::Vim -e run > $HOME/.vim/ftplugin/editortools.vim
 
-should dump the scrip to the correct file.
+should dump the script to the correct file.
 
 =head1 MAPPINGS
 

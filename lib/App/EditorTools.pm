@@ -5,7 +5,7 @@ use warnings;
 
 use App::Cmd::Setup -app;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =pod
 
@@ -40,6 +40,16 @@ L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-EditorTools>
 =head1 AUTHOR
 
 Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>
+
+Bug fixes and contributions from:
+
+=over 4
+
+=item *
+
+Shlomi Fish
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

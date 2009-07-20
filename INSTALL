@@ -21,7 +21,7 @@ data loss.
 The documentation is included in the module file. Once the module is
 installed, view the documentation with:
 
-	perldoc App::LexicalVarReplace::Vim
+	perldoc App::EditorTools::Vim
 
 For convience, the documentaion is also reproduced in the README file.
 

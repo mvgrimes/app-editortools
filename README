@@ -3,7 +3,7 @@ NAME
     maybe more)
 
 SYNOPSIS
-        See PPIx::EditorTools::* 
+        See PPIx::EditorTools::*
 
 DESCRIPTION
     Command line tools to leverage PPIx::EditorTools (and maybe more) for
@@ -14,7 +14,7 @@ SEE ALSO
 
 BUGS
     Please report any bugs or suggestions at
-    http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-EditorTools
+    <http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-EditorTools>
 
 AUTHOR
     Mark Grimes, <mgrimes@cpan.org>

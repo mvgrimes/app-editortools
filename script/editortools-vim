@@ -3,8 +3,9 @@
 use strict;
 use warnings;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use FindBin::libs;
-use App::EditorTools -run;
+use App::EditorTools;
+App::EditorTools->run;
 

@@ -12,6 +12,7 @@ sub opt_spec {
 sub validate_args {
     my ( $self, $opt, $args ) = @_;
     $self->usage_error("Filename is required") unless $opt->{filename};
+    return 1;
 }
 
 sub execute {

@@ -58,6 +58,9 @@ at your option, any later version of Perl 5 you may have available.
 
 =cut
 
+use strict;
+use warnings;
+
 our $VERSION = '0.04';
 
 sub run {

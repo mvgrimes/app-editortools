@@ -15,6 +15,7 @@ sub opt_spec {
 
 sub validate_args {
     my ( $self, $opt, $args ) = @_;
+
     $self->usage_error("start_location is required")
       unless $opt->{start_location};
     $self->usage_error("end_location is required") unless $opt->{end_location};
@@ -27,6 +28,7 @@ sub validate_args {
     $self->usage_error("end_location must be <Int>,<Int>")
       unless scalar @{ $opt->{end} } == 2;
 
+    return 1;
 }
 
 sub execute {

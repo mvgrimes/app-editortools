@@ -18,6 +18,7 @@ sub validate_args {
     for (qw(line column replacement)) {
         $self->usage_error("Arg $_ is required") unless $opt->{$_};
     }
+    return 1;
 }
 
 sub execute {

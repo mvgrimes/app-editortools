@@ -7,8 +7,6 @@ lib/App/EditorTools/Command/RenamePackage.pm
 lib/App/EditorTools/Command/RenamePackageFromPath.pm
 lib/App/EditorTools/Command/RenameVariable.pm
 lib/App/EditorTools/Vim.pm
-Makefile
-Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
@@ -19,7 +17,7 @@ samples/vim-introtempvar.gif
 samples/vim-renamepackage.gif
 samples/vim-renamevar.gif
 script/editortools-vim
-t/00-use.t
+t/00-load.t
 t/10-run.t
 xt/95-prereq.t
 xt/96-kwalitee.t

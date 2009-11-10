@@ -10,3 +10,4 @@
 ^lib/PPIx$
 ^.gitignore$
 App-EditorTools*
+^MYMETA.yml$

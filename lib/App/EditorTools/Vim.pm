@@ -1,3 +1,20 @@
+package App::EditorTools::Vim;
+
+use strict;
+use warnings;
+
+our $VERSION = '0.05';
+
+sub run {
+    print <<"END_INTRO";
+" App::EditorTools::Vim generated script
+" Version: $VERSION
+END_INTRO
+    print while (<DATA>);
+
+    return;
+}
+
 =pod
 
 =head1 NAME
@@ -57,19 +74,6 @@ it under the same terms as Perl itself, either Perl version 5.8.2 or,
 at your option, any later version of Perl 5 you may have available.
 
 =cut
-
-use strict;
-use warnings;
-
-our $VERSION = '0.04';
-
-sub run {
-    print <<END_INTRO;
-" App::EditorTools::Vim generated script
-" Version: $VERSION
-END_INTRO
-    print while (<DATA>);
-}
 
 1;
 

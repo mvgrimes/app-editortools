@@ -24,7 +24,7 @@ sub validate_args {
 sub execute {
     my ( $self, $opt, $arg ) = @_;
 
-    my $doc_as_str = join( "", <STDIN> );
+    my $doc_as_str = eval { local $/ = undef; <STDIN> };
 
     require PPIx::EditorTools::RenameVariable;
     print PPIx::EditorTools::RenameVariable->new->rename(
@@ -33,6 +33,7 @@ sub execute {
         line        => $opt->{line},
         replacement => $opt->{replacement},
     )->code;
+    return;
 }
 
 1;

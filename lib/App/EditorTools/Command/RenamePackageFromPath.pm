@@ -18,12 +18,13 @@ sub validate_args {
 sub execute {
     my ( $self, $opt, $arg ) = @_;
 
-    my $doc_as_str = join( "", <STDIN> );
+    my $doc_as_str = eval { local $/ = undef; <STDIN> };
 
     require PPIx::EditorTools::RenamePackageFromPath;
     print PPIx::EditorTools::RenamePackageFromPath->new->rename(
         code     => $doc_as_str,
         filename => $opt->{filename} )->code;
+    return;
 }
 
 1;

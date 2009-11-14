@@ -34,7 +34,7 @@ sub validate_args {
 sub execute {
     my ( $self, $opt, $arg ) = @_;
 
-    my $doc_as_str = join( "", <STDIN> );
+    my $doc_as_str = eval { local $/ = undef; <STDIN> };
 
     require PPIx::EditorTools::IntroduceTemporaryVariable;
     my $munged = PPIx::EditorTools::IntroduceTemporaryVariable->new->introduce(
@@ -45,7 +45,7 @@ sub execute {
     );
 
     print $munged->code;
-
+    return;
 }
 
 1;

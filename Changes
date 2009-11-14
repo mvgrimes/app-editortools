@@ -1,5 +1,8 @@
 Changes for App::EditorTools
 
+0.08 - Sat Nov 14 16:56:51 2009
+	Convert tests from IPC::Run3 to App::Cmd::Testers to fix tests on certain platforms
+
 0.07 - Fri Nov 13 13:03:23 2009
 	Removed unnecessary FindBin::libs rereq
 

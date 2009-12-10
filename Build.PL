@@ -10,7 +10,12 @@ my $build = Module::Build->new(
         'PPIx::EditorTools' => 0,
         'App::Cmd'          => '0.301',
     },
-    build_requires => { 'Test::Differences' => 0, },
+    build_requires => {
+        'Test::Differences' => 0,
+        'Text::Diff'        => 0,
+        'Test::More'        => 0.87,
+        'File::Find'        => 0,
+    },
 
     meta_merge => {
         resources => {

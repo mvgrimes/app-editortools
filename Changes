@@ -1,5 +1,9 @@
 Changes for App::EditorTools
 
+0.09 - Thu Dec 10 12:55:30 2009
+	Added version requirement for Test::More in Build.PL so we can use
+	done_testing().
+
 0.08 - Sat Nov 14 16:56:51 2009
 	Convert tests from IPC::Run3 to App::Cmd::Testers to fix tests on certain platforms
 

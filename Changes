@@ -1,5 +1,8 @@
 Changes for App::EditorTools
 
+0.11 - Thu Mar 25 13:28:50 2010
+	Minor bug fix to install-emacs command.
+
 0.10 - Thu Mar 25 13:20:30 2010
 	Added install-vim and install-emacs command to make binding install
 	easier and more portable. Improved documentation and testing.

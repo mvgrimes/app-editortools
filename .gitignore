@@ -10,3 +10,4 @@ App-EditorTools*
 lib/PPIx
 Changes.bak
 *.swp
+.DS_Store

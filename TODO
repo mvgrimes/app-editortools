@@ -1,0 +1,2 @@
+o RenamePackageFromPath should work w/o "package" line or "package xxx;"
+o Add ability to install vim/emacs script globally

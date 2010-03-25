@@ -11,3 +11,6 @@
 ^.gitignore$
 App-EditorTools*
 ^MYMETA.yml$
+^\.DS_Store$
+\.swp$
+TODO

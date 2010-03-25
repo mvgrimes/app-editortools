@@ -4,11 +4,16 @@ my $build = Module::Build->new(
     module_name   => 'App::EditorTools',
     license       => 'perl',
     create_readme => 1,
-    script_files  => [qw(script/editortools-vim)],
+    script_files  => [qw(script/editortools)],
     requires      => {
         'perl'              => '5.008',
         'PPIx::EditorTools' => 0,
         'App::Cmd'          => '0.301',
+        'File::Path'        => 0,
+        'File::Basename'    => 0,
+        'IPC::Cmd'          => 0,
+        'File::HomeDir'     => '0.80',
+        'File::Slurp'       => 0,
     },
     build_requires => {
         'Test::Differences' => 0,

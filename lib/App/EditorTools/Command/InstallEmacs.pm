@@ -10,7 +10,7 @@ use File::Slurp;
 use File::HomeDir;
 use IPC::Cmd qw(run);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub command_names { 'install-emacs' }
 
@@ -93,9 +93,9 @@ sub _confirm_one_opt {
 }
 
 sub _mkdir {
-    my ( $self, $opt ) = @_;
+    my ( $self, $path ) = @_;
 
-    my $dir = dirname $opt->{dest};
+    my $dir = dirname $path; 
 
     unless ( -d $dir ) {
         mkpath($dir)

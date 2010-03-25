@@ -1,5 +1,9 @@
 Changes for App::EditorTools
 
+0.10 - Thu Mar 25 13:20:30 2010
+	Added install-vim and install-emacs command to make binding install
+	easier and more portable. Improved documentation and testing.
+
 0.09 - Thu Dec 10 12:55:30 2009
 	Added version requirement for Test::More in Build.PL so we can use
 	done_testing().

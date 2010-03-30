@@ -76,15 +76,15 @@ REFACTORINGS
             my $y = 3 + $foo + 17;
 
     RenamePackageFromPath
-        editortools renamepackagefrompath -f filename 
+            editortools renamepackagefrompath -f filename 
 
-    Change the `package' declaration in the current file to reflect
-    `filename'. Typically this is used when you want to rename a module.
-    Move the module to a new location and pass the new filename to the
-    `editortools' command. For example, if you are editing
-    `lib/App/EditorTools.pm' the package declaration will be changed to
-    `package App::EditorTools;'. At the moment there must be a valid package
-    declaration in the file for this to work.
+        Change the `package' declaration in the current file to reflect
+        `filename'. Typically this is used when you want to rename a module.
+        Move the module to a new location and pass the new filename to the
+        `editortools' command. For example, if you are editing
+        `lib/App/EditorTools.pm' the package declaration will be changed to
+        `package App::EditorTools;'. At the moment there must be a valid
+        package declaration in the file for this to work.
 
 SEE ALSO
     http://code-and-hacks.blogspot.com/2009/07/stealing-from-padre-for-vim-p

@@ -1,5 +1,9 @@
 Changes for App::EditorTools
 
+0.12 - Tue Mar 30 17:29:06 2010
+	Moved vim/emacs script into a share directory (from DATA).
+	Improved the documenation a bit.
+
 0.11 - Thu Mar 25 13:28:50 2010
 	Minor bug fix to install-emacs command.
 

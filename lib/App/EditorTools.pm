@@ -5,7 +5,9 @@ use warnings;
 
 use App::Cmd::Setup -app;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
+
+1;
 
 =pod
 
@@ -102,8 +104,6 @@ will yield:
     my $x = 1 + $foo + 15;
     my $y = 3 + $foo + 17;
 
-=back
-
 =item RenamePackageFromPath
 
     editortools renamepackagefrompath -f filename 
@@ -116,11 +116,7 @@ package declaration will be changed to C<package App::EditorTools;>. At the
 moment there must be a valid package declaration in the file for this to
 work.
 
-=cut
-
-1;
-
-__END__
+=back
 
 =head1 SEE ALSO
 

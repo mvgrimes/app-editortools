@@ -11,9 +11,11 @@ my $build = Module::Build->new(
         'App::Cmd'          => '0.301',
         'File::Path'        => 0,
         'File::Basename'    => 0,
+        'File::ShareDir'    => 0,
         'IPC::Cmd'          => 0,
         'File::HomeDir'     => '0.80',
         'File::Slurp'       => 0,
+        'parent'            => 0,
     },
     build_requires => {
         'Test::Differences' => 0,
@@ -21,6 +23,8 @@ my $build = Module::Build->new(
         'Test::More'        => 0.87,
         'File::Find'        => 0,
     },
+    configure_requires => { 'Module::Build' => '0.36', },
+    share_dir          => 'share',
 
     meta_merge => {
         resources => {

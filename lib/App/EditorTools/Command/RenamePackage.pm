@@ -30,3 +30,25 @@ sub execute {
 }
 
 1;
+
+=head1 NAME
+
+App::EditorTools::Command::RenamePackage - Rename the Package Based 
+
+=head1 DESCRIPTION
+
+See L<App::EditorTools> for documentation.
+
+=head1 AUTHOR
+
+Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2010 by Mark Grimes
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.2 or,
+at your option, any later version of Perl 5 you may have available.
+
+

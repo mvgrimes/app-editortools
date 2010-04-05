@@ -11,7 +11,7 @@ use File::ShareDir qw(dist_file);
 sub execute {
     my ( $self, $opt, $arg ) = @_;
 
-    print STDERR "Installing emacs script to:\n";
+    print STDERR "Installing script to:\n";
     print STDERR $opt->{dest} || 'STDOUT';
     print STDERR "\n";
 

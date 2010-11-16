@@ -2,9 +2,9 @@ package App::EditorTools::Command::InstallEmacs;
 
 use strict;
 use warnings;
-use parent 'App::EditorTools::Command::Parent::Install';
+use parent 'App::EditorTools::CommandBase::Install';
 
-use App::EditorTools -command;
+#use App::EditorTools -command;
 use File::HomeDir;
 
 our $VERSION = '0.03';
@@ -65,7 +65,7 @@ END_INTRO
 App::EditorTools::Command::InstallEmacs - Install emacs bindings for App::EditorTools
 
 =head1 SYNOPSIS
-    
+
     # Install the emacs script to create binding to App::EditorTools with:
     editortools install-emacs
 
@@ -73,7 +73,7 @@ App::EditorTools::Command::InstallEmacs - Install emacs bindings for App::Editor
 
 This will place the emacs script contained in the share dir of this
 distribution where emacs expects it ( C<$HOME/.emacs.d/editortools.el> for a
-local install on a unix-like system)>). 
+local install on a unix-like system)>).
 
 =head1 OPTIONS
 
@@ -91,7 +91,7 @@ Specify a full path (directory and filename) for the emacs script.
 
 =item --print
 
-Print the emacs script to STDOUT. 
+Print the emacs script to STDOUT.
 
 =item --dryrun
 

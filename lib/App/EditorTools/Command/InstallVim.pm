@@ -2,9 +2,9 @@ package App::EditorTools::Command::InstallVim;
 
 use strict;
 use warnings;
-use parent 'App::EditorTools::Command::Parent::Install';
+use parent 'App::EditorTools::CommandBase::Install';
 
-use App::EditorTools -command;
+#use App::EditorTools -command;
 use File::HomeDir;
 # use IPC::Cmd qw(run);
 
@@ -58,16 +58,16 @@ END_INTRO
 
 # sub _get_vimruntime {
 #     my $self = shift;
-# 
+#
 #     my $file = 'appeditvim.tmp';
 #     my $cmd  = qq{vim -c 'redir > $file' -c 'echomsg \$VIMRUNTIME' -c q};
-# 
+#
 #     run( command => $cmd, verbose => 0, )
 #       or $self->usage_error("Error running vim to find global path");
 #     my $dest = read_file $file
 #       or $self->usage_error("Unable to find global vim path");
 #     unlink $file;
-# 
+#
 #     $dest =~ s{[\n\r]}{}mg;
 #     return $dest;
 # }
@@ -85,7 +85,7 @@ END_INTRO
 App::EditorTools::Command::InstallVim - Install vim for App::EditorTools
 
 =head1 SYNOPSIS
-    
+
     # Install the vim script to create binding to App::EditorTools with:
     editortools install-vim
 
@@ -93,7 +93,7 @@ App::EditorTools::Command::InstallVim - Install vim for App::EditorTools
 
 This will place the vim script contained in the share dir of this distribution
 where vim expects it ( C<$HOME/.vim/ftplugin/perl/editortools.vim> for a local
-install on a unix-like system)>). 
+install on a unix-like system)>).
 
 =head1 OPTIONS
 
@@ -111,7 +111,7 @@ Specify a full path (directory and filename) for the vim script.
 
 =item --print
 
-Print the vim script to STDOUT. 
+Print the vim script to STDOUT.
 
 =item --dryrun
 

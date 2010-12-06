@@ -1,5 +1,9 @@
 Changes for App::EditorTools
 
+0.14 - Mon Dec  6 14:28:49 EST 2010
+	Fixed bug that may appear with newer versions of App::Cmd. Thanks to
+	kentnl++ for the report and patch (RT#63018).
+
 0.12 - Tue Mar 30 17:29:06 2010
 	Moved vim/emacs script into a share directory (from DATA).
 	Improved the documenation a bit.

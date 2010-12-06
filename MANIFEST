@@ -5,10 +5,10 @@ lib/App/EditorTools.pm
 lib/App/EditorTools/Command/InstallEmacs.pm
 lib/App/EditorTools/Command/InstallVim.pm
 lib/App/EditorTools/Command/IntroduceTemporaryVariable.pm
-lib/App/EditorTools/Command/Parent/Install.pm
 lib/App/EditorTools/Command/RenamePackage.pm
 lib/App/EditorTools/Command/RenamePackageFromPath.pm
 lib/App/EditorTools/Command/RenameVariable.pm
+lib/App/EditorTools/CommandBase/Install.pm
 lib/App/EditorTools/Emacs.pod
 lib/App/EditorTools/Vim.pod
 MANIFEST			This list of files

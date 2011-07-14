@@ -5,7 +5,7 @@ use warnings;
 
 use App::Cmd::Setup -app;
 
-our $VERSION = '0.14';
+our $VERSION = '0.15';
 
 1;
 
@@ -106,15 +106,28 @@ will yield:
 
 =item RenamePackageFromPath
 
-    editortools renamepackagefrompath -f filename 
+    editortools renamepackagefrompath -f filename
 
 Change the C<package> declaration in the current file to reflect C<filename>.
-Typically this is used when you want to rename a module. Move the module
-to a new location and pass the new filename to the C<editortools> command.
-For example, if you are editing C<lib/App/EditorTools.pm> the
-package declaration will be changed to C<package App::EditorTools;>. At the
-moment there must be a valid package declaration in the file for this to
-work.
+Typically this is used when you want to rename a module. Move the module to a
+new location and pass the new filename to the C<editortools> command.  For
+example, if you are editing C<lib/App/EditorTools.pm> the package declaration
+will be changed to C<package App::EditorTools;>. At the moment there must be a
+valid package declaration in the file for this to work.
+
+If the C<filename> is a file that exists in the system, then
+C<renamepackagefrompath> will attempt to resolve any symlinks. This allows us
+work on files under a symlink (ie, M@ -> lib/App/Model), but rename them
+correctly.
+
+=back
+
+=item RenamePackage
+
+    editortools renamepackage -n Package::Name
+
+Change the C<package> declaration in the current file to Package::Name.  At the
+moment there must be a valid package declaration in the file for this to work.
 
 =back
 

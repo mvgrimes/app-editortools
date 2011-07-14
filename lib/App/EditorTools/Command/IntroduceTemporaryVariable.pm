@@ -5,6 +5,8 @@ use warnings;
 
 use App::EditorTools -command;
 
+our $VERSION = '0.15';
+
 sub opt_spec {
     return (
         [ "start_location|s=s", "The line,column of the start" ],

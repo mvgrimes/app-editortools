@@ -16,6 +16,7 @@ my $build = Module::Build->new(
         'File::HomeDir'     => '0.80',
         'File::Slurp'       => 0,
         'parent'            => 0,
+        'Path::Class'       => 0,
     },
     build_requires => {
         'Test::Differences' => 0,

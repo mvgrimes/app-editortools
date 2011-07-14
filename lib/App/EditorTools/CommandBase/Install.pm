@@ -9,6 +9,8 @@ use File::Slurp;
 use File::ShareDir qw(dist_file);
 use App::Cmd::Setup -command;
 
+our $VERSION = '0.15';
+
 sub execute {
     my ( $self, $opt, $arg ) = @_;
 

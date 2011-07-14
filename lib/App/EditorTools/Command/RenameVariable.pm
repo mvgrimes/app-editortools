@@ -5,6 +5,8 @@ use warnings;
 
 use App::EditorTools -command;
 
+our $VERSION = '0.15';
+
 sub opt_spec {
     return (
         [ "line|l=s",   "Line number of the start of variable to replace", ],

@@ -2,16 +2,19 @@ package App::EditorTools::Command::RenamePackage;
 
 use strict;
 use warnings;
+use Path::Class;
 
 use App::EditorTools -command;
 
+our $VERSION = '0.15';
+
 sub opt_spec {
-    return ( [ "filename|f=s", "The filename and path of the package", ] );
+    return ( [ "name|n=s", "The new name of the package", ] );
 }
 
 sub validate_args {
     my ( $self, $opt, $args ) = @_;
-    $self->usage_error("Filename is required") unless $opt->{filename};
+    $self->usage_error("Name is required") unless $opt->{name};
     return 1;
 }
 
@@ -20,12 +23,10 @@ sub execute {
 
     my $doc_as_str = eval { local $/ = undef; <STDIN> };
 
-    print "DOC: " . $doc_as_str;
-
-    require PPIx::EditorTools::RenamePackageFromPath;
-    print PPIx::EditorTools::RenamePackageFromPath->new->rename(
-        code     => $doc_as_str,
-        filename => $opt->{filename} )->code;
+    require PPIx::EditorTools::RenamePackage;
+    print PPIx::EditorTools::RenamePackage->new->rename(
+        code        => $doc_as_str,
+        replacement => $opt->{name} )->code;
     return;
 }
 

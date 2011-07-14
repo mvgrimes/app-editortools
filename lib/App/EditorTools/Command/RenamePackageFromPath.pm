@@ -2,8 +2,11 @@ package App::EditorTools::Command::RenamePackageFromPath;
 
 use strict;
 use warnings;
+use Path::Class;
 
 use App::EditorTools -command;
+
+our $VERSION = '0.15';
 
 sub opt_spec {
     return ( [ "filename|f=s", "The filename and path of the package", ] );
@@ -12,6 +15,15 @@ sub opt_spec {
 sub validate_args {
     my ( $self, $opt, $args ) = @_;
     $self->usage_error("Filename is required") unless $opt->{filename};
+
+    # If we are dealing with a real file, see if we can clean up the
+    # path. This let's us work on files under a symlink
+    # (ie, M/ -> lib/App/Model), but rename them correctly.
+    if( -f $opt->{filename} ){
+        my $real_name = file( $opt->{filename} )->resolve;
+        $opt->{filename} = $real_name if defined $real_name;
+    }
+
     return 1;
 }
 
@@ -19,6 +31,8 @@ sub execute {
     my ( $self, $opt, $arg ) = @_;
 
     my $doc_as_str = eval { local $/ = undef; <STDIN> };
+
+    warn "# here\n";
 
     require PPIx::EditorTools::RenamePackageFromPath;
     print PPIx::EditorTools::RenamePackageFromPath->new->rename(

@@ -1,4 +1,3 @@
-
 ;; Copyright (C) 2010 Pat Regan <thehead@patshead.com>
 
 ;; Keywords: faces
@@ -75,7 +74,7 @@
          (p (point))
          )
     (shell-command-on-region (point-min) (point-max)
-                             (format "editortools renamepackage -f %s" (buffer-file-name)) t nil nil)
+                             (format "editortools renamepackage -n %s" (buffer-file-name)) t nil nil)
     (goto-char p)
     )
   )

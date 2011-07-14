@@ -120,8 +120,6 @@ C<renamepackagefrompath> will attempt to resolve any symlinks. This allows us
 work on files under a symlink (ie, M@ -> lib/App/Model), but rename them
 correctly.
 
-=back
-
 =item RenamePackage
 
     editortools renamepackage -n Package::Name

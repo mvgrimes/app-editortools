@@ -10,6 +10,8 @@ use lib 't/lib';
 use AETest;
 
 {
+    no warnings qw(qw); # Turn off warnings about comma being used as a sep
+
     my $return =
       AETest->test( [qw{introducetemporaryvariable -s 1,13 -e 1,21 -v foo}],
         <<'CODE' );

@@ -32,8 +32,6 @@ sub execute {
 
     my $doc_as_str = eval { local $/ = undef; <STDIN> };
 
-    warn "# here\n";
-
     require PPIx::EditorTools::RenamePackageFromPath;
     print PPIx::EditorTools::RenamePackageFromPath->new->rename(
         code     => $doc_as_str,

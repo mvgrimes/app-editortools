@@ -12,7 +12,6 @@ lib/App/EditorTools/CommandBase/Install.pm
 lib/App/EditorTools/Emacs.pod
 lib/App/EditorTools/Vim.pod
 MANIFEST			This list of files
-META.yml
 README
 samples/introtempvar.pl
 samples/lib/New/Package/Name.pm
@@ -28,6 +27,8 @@ t/CmdInstallEmacs.t
 t/CmdInstallVim.t
 t/CmdIntroduceTempVar.t
 t/CmdRenamePackage.t
+t/CmdRenamePackageFromPath.t
+t/CmdRenameVariable.t
 t/lib/AETest.pm
 xt/95-prereq.t
 xt/96-kwalitee.t

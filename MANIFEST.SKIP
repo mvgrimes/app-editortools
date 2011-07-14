@@ -14,3 +14,4 @@ App-EditorTools*
 ^\.DS_Store$
 \.swp$
 TODO
+^MYMETA\.json$

@@ -1,5 +1,11 @@
 Changes for App::EditorTools
 
+0.15 - Thu Jul 14 14:40:36 EDT 2011
+	Added ability to renamepackagefrompath to work through symlinks
+	- Bug fixes
+	- Added versions to all Perl files
+	- Misc cleanup
+
 0.14 - Mon Dec  6 14:28:49 EST 2010
 	Fixed bug that may appear with newer versions of App::Cmd. Thanks to
 	kentnl++ for the report and patch (RT#63018).

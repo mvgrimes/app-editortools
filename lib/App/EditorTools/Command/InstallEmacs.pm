@@ -7,7 +7,7 @@ use parent 'App::EditorTools::CommandBase::Install';
 #use App::EditorTools -command;
 use File::HomeDir;
 
-our $VERSION = '0.15';
+our $VERSION = '0.16';
 
 sub command_names { 'install-emacs' }
 

@@ -6,7 +6,7 @@ use Path::Class;
 
 use App::EditorTools -command;
 
-our $VERSION = '0.15';
+our $VERSION = '0.16';
 
 sub opt_spec {
     return ( [ "name|n=s", "The new name of the package", ] );

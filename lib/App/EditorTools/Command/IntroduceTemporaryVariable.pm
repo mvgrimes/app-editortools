@@ -5,7 +5,7 @@ use warnings;
 
 use App::EditorTools -command;
 
-our $VERSION = '0.15';
+our $VERSION = '0.16';
 
 sub opt_spec {
     return (

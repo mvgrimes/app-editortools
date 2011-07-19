@@ -1,5 +1,8 @@
 Changes for App::EditorTools
 
+0.16 - Tue Jul 19 10:40:04 EDT 2011
+	Bug fix for tests -- missing SKIP: label on a skip block
+
 0.15 - Thu Jul 14 14:40:36 EDT 2011
 	Added ability to renamepackagefrompath to work through symlinks
 	- Bug fixes

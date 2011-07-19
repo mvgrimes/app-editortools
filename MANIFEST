@@ -36,3 +36,4 @@ xt/97-critic.t
 xt/98-pod.t
 xt/99-podcoverage.t
 xt/perlcriticrc
+META.yml

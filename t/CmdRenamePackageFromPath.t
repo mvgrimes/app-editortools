@@ -29,7 +29,7 @@ CODE
     is( $return->error, undef, '... no error' );
 }
 
-{
+SKIP: {
     my $symlink_exists = eval { symlink('lib/App','A'); 1 };
     skip 'System must support symlinks to check them', 2 unless $symlink_exists;
     my $return = AETest->test( [qw(renamepackagefrompath -f A/EditorTools.pm)], <<'CODE' );

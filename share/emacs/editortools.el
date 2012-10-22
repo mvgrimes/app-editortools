@@ -90,4 +90,4 @@
 (define-key cperl-mode-map (kbd "C-c e r") 'editortools-renamevariable)
 (define-key cperl-mode-map (kbd "C-c e t") 'editortools-introducetemporaryvariable)
 
-(provide 'editortools')
+(provide 'editortools)

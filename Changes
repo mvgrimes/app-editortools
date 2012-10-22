@@ -1,5 +1,9 @@
 Changes for App::EditorTools
 
+0.17 - Mon Oct 22 15:49:29 EDT 2012
+    Fixes bug in the emacs script RT#80315
+    Improves the vim script
+
 0.16 - Tue Jul 19 10:40:04 EDT 2011
 	Bug fix for tests -- missing SKIP: label on a skip block
 

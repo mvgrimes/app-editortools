@@ -6,7 +6,7 @@ use Path::Class;
 
 use App::EditorTools -command;
 
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 
 sub opt_spec {
     return ( [ "filename|f=s", "The filename and path of the package", ] );

@@ -8,7 +8,7 @@ use parent 'App::EditorTools::CommandBase::Install';
 use File::HomeDir;
 # use IPC::Cmd qw(run);
 
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 
 sub command_names { 'install-vim' }
 

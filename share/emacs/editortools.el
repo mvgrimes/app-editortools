@@ -28,65 +28,64 @@
 (defun editortools-renamevariable (varname)
   "Call rename variable on buffer"
   (interactive "sNew Variable Name: ")
-  (let* (
-         (p (point))
-         (col (+ 1 (current-column))) ; vim numbers columns differently
-         (line (line-number-at-pos))
-         )
-    (shell-command-on-region (point-min) (point-max)
-                             (format "editortools renamevariable -l %d -c %d -r %s" line col varname) t nil nil)
-    (goto-char p)
-    )
-  )
+  (editortools-modify-buffer "renamevariable" "-l" (number-to-string (line-number-at-pos))
+											  "-c" (number-to-string (editortools-get-column (point)))
+											  "-r" varname))
 
 (defun editortools-introducetemporaryvariable (varname)
   "Call introducetempoararyvariable on region"
   (interactive "sNew Variable Name: ")
-  (let* (
-         (p (point))
-         (startline (line-number-at-pos (region-beginning)))
-         (startcol (editortools-get-column (region-beginning)))
-         (endline (line-number-at-pos (region-end)))
-         (endcol (editortools-get-column (region-beginning)))
-         )
-    (shell-command-on-region (point-min) (point-max)
-                             (format "editortools introducetemporaryvariable -s %d,%d -e %d,%d -v %s" startline startcol endline endcol varname) t nil nil)
-    (goto-char p)
-    )
-  )
+  (let* ((startline (number-to-string (line-number-at-pos (region-beginning))))
+         (startcol (number-to-string (editortools-get-column (region-beginning))))
+         (endline (number-to-string (line-number-at-pos (region-end))))
+         (endcol (number-to-string (- (editortools-get-column (region-end)) 1))))
+	(editortools-modify-buffer "introducetemporaryvariable" "-s" (concat startline "," startcol)
+															"-e" (concat endline "," endcol)
+															"-v" varname)))
 
 (defun editortools-renamepackagefrompath ()
   "Call renamepackagefrompath"
   (interactive)
-  (let* (
-         (p (point))
-         )
-    (shell-command-on-region (point-min) (point-max)
-                             (format "editortools renamepackagefrompath -f %s" (buffer-file-name)) t nil nil)
-    (goto-char p)
-    )
-  )
+  (editortools-modify-buffer "renamepackagefrompath" "-f" (buffer-file-name)))
 
-(defun editortools-renamepackage ()
+(defun editortools-renamepackage (package-name)
   "Call renamepackage"
-  (interactive)
-  (let* (
-         (p (point))
-         )
-    (shell-command-on-region (point-min) (point-max)
-                             (format "editortools renamepackage -n %s" (buffer-file-name)) t nil nil)
-    (goto-char p)
-    )
-  )
+  (interactive "sNew Package Name: ")
+  (editortools-modify-buffer "renamepackage" "-n" package-name))
 
 (defun editortools-get-column (p)
   "Get the column of a point"
   (save-excursion
     (goto-char p)
-    (+ 1 (current-column)) ; vim counts columns differently
-    )
-  )
+    (+ 1 (current-column)))) ; vim counts columns differently
 
+(defun editortools-modify-buffer (&rest command)
+  (let ((refactor-buffer (get-buffer-create "*editortools*")))
+	(editortools-erase-specific-buffer refactor-buffer)
+    (if (editortools-command-succeeds command)
+		(editortools-buffer-swap-text-maintain-position refactor-buffer)
+	  (message (editortools-specific-buffer-string refactor-buffer)))))
+
+(defun editortools-command-succeeds (command)
+  (= (apply 'call-process-region (point-min) (point-max) "editortools"
+			nil refactor-buffer t
+			command)
+	 0))
+
+(defun editortools-erase-specific-buffer (buffer)
+  (save-excursion (set-buffer refactor-buffer)
+				  (erase-buffer)))
+
+(defun editortools-specific-buffer-string (buffer)
+  (save-excursion (set-buffer refactor-buffer)
+				  (buffer-string)))
+
+(defun editortools-buffer-swap-text-maintain-position (buffer)
+  (let ((p (point)))
+	(buffer-swap-text buffer)
+	(goto-char p)))
+
+(require 'cperl-mode)
 (define-key cperl-mode-map (kbd "C-c e r") 'editortools-renamevariable)
 (define-key cperl-mode-map (kbd "C-c e t") 'editortools-introducetemporaryvariable)
 

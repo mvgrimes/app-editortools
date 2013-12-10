@@ -1,19 +1,27 @@
 package App::EditorTools;
 
+# ABSTRACT: Command line tool for Perl code refactoring
+
 use strict;
 use warnings;
 
 use App::Cmd::Setup -app;
 
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 1;
+
+__END__
 
 =pod
 
 =head1 NAME
 
 App::EditorTools - Command line tool for Perl code refactoring
+
+=head1 VERSION
+
+version 0.18
 
 =head1 DESCRIPTION
 
@@ -40,6 +48,10 @@ Rename the Package Based on the Path of the File
 =back
 
 More refactoring tools are expected to be added in the future.
+
+=head1 NAME
+
+App::EditorTools - Command line tool for Perl code refactoring
 
 =head1 BACKGROUND
 
@@ -85,7 +97,7 @@ The command C<editortools renamevariable -c 3 -l 12 -r counter> will result in:
         print $counter;
     }
     print $x;
-    
+
 =item IntroduceTemporaryVariable
 
     editortools introducetemporaryvariable -s line1,col1 -e line2,col2 -v varname
@@ -99,7 +111,6 @@ with the temporary variable C<varname>. For example, given:
 The command C<editortools introducetemporaryvariable -s 1,13 -e 1,21 -v foo> 
 will yield:
 
-    
     my $foo = (10 / 12);
     my $x = 1 + $foo + 15;
     my $y = 3 + $foo + 17;
@@ -143,25 +154,11 @@ L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-EditorTools>
 
 Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>
 
-Bug fixes and contributions from:
-
-=over 4
-
-=item *
-
-Shlomi Fish
-
-=item *
-
-Pat Regan (emacs interface)
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2010 by Mark Grimes
+This software is copyright (c) 2013 by Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.2 or,
-at your option, any later version of Perl 5 you may have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
+=cut

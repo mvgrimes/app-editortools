@@ -1,5 +1,17 @@
 Changes for App::EditorTools
 
+0.18 - Tue Dec 10 12:25:15 EST 2013
+    Fixes several problems with the emacs file that's installed. Thankes to
+    lackita++ for the patch on github.
+    * If the command failed, the entire contents of the file would be wiped
+    * out, now it just puts a message in the minibuffer.
+    * Extracted some methods to remove duplication and clarify intent.
+    * Introduce temporary variable was using the start column value as the end
+    * column value. 
+    * Rename package was renaming all packages to the file path name.
+
+    Fixes Changes file to adhere to CPAN::Changes spec
+
 0.17 - Mon Oct 22 15:49:29 EDT 2012
     Fixes bug in the emacs script RT#80315
     Improves the vim script

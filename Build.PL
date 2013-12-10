@@ -4,7 +4,13 @@ my $build = Module::Build->new(
     module_name   => 'App::EditorTools',
     license       => 'perl',
     create_readme => 1,
+
     script_files  => [qw(script/editortools)],
+
+    configure_requires => {
+        'Module::Build'         => '0.4004',
+    },
+
     requires      => {
         'perl'              => '5.008',
         'PPIx::EditorTools' => 0,
@@ -18,13 +24,13 @@ my $build = Module::Build->new(
         'parent'            => 0,
         'Path::Class'       => 0,
     },
-    build_requires => {
+    build_requires => { # Should be test_requires, but MB still doesn't handle well
         'Test::Differences' => 0,
         'Text::Diff'        => 0,
         'Test::More'        => 0.87,
         'File::Find'        => 0,
     },
-    configure_requires => { 'Module::Build' => '0.36', },
+
     share_dir          => 'share',
 
     meta_merge => {

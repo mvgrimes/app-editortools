@@ -1,17 +1,46 @@
+# Vim and other common swap files:
+~$
+\.swp$
+\.swo$
+
+# Perl Module::Build etc files:
+\.build$
 ^_build
 ^Build$
 ^blib
-~$
-\.bak$
-\.svn/
+^pm_to_blib$
 ^MANIFEST\.SKIP$
-.releaserc
+
+# Common backup files:
+\.bak$
+
+# VCS files:
 \.git/
-^lib/PPIx$
-^.gitignore$
-App-EditorTools*
+\.gitignore
+
+# META files:
 ^MYMETA.yml$
-^\.DS_Store$
-\.swp$
-TODO
 ^MYMETA\.json$
+
+# Dist::Zilla and Pod::Weaver
+dist\.ini
+weaver\.ini
+
+# Common experimenting/temporary dirs:
+exp/
+tmp/
+
+# Documentation (git gets README.md, cpan gets README)
+!README
+README.md
+TODO
+
+# Local::lib install:
+^\.local-v.*
+
+# O/S specific temp/meta files:
+^\.DS_Store$
+
+# Repo specific:
+App-EditorTools*
+^lib/PPIx$

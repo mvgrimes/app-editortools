@@ -1,5 +1,7 @@
 package App::EditorTools::Command::InstallVim;
 
+# ABSTRACT: Installs vim bindings for App::EditorTools
+
 use strict;
 use warnings;
 use parent 'App::EditorTools::CommandBase::Install';
@@ -8,7 +10,7 @@ use parent 'App::EditorTools::CommandBase::Install';
 use File::HomeDir;
 # use IPC::Cmd qw(run);
 
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 sub command_names { 'install-vim' }
 
@@ -78,11 +80,20 @@ END_INTRO
 # C</usr/share/vim/vim72/ftplugin/perl/editortools.vim> or a similar location
 # for your operating system.
 
+
+1;
+
+__END__
+
 =pod
 
 =head1 NAME
 
-App::EditorTools::Command::InstallVim - Install vim for App::EditorTools
+App::EditorTools::Command::InstallVim - Installs vim bindings for App::EditorTools
+
+=head1 VERSION
+
+version 0.18
 
 =head1 SYNOPSIS
 
@@ -129,12 +140,9 @@ Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2009 by Mark Grimes
+This software is copyright (c) 2013 by Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.2 or,
-at your option, any later version of Perl 5 you may have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-1;

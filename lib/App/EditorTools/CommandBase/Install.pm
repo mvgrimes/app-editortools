@@ -1,5 +1,7 @@
 package App::EditorTools::CommandBase::Install;
 
+# ABSTRACT: Base class for installing bindings for editors
+
 use strict;
 use warnings;
 
@@ -9,7 +11,7 @@ use File::Slurp;
 use File::ShareDir qw(dist_file);
 use App::Cmd::Setup -command;
 
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 sub execute {
     my ( $self, $opt, $arg ) = @_;
@@ -83,3 +85,28 @@ sub _confirm_one_opt {
 }
 
 1;
+
+__END__
+
+=pod
+
+=head1 NAME
+
+App::EditorTools::CommandBase::Install - Base class for installing bindings for editors
+
+=head1 VERSION
+
+version 0.18
+
+=head1 AUTHOR
+
+Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

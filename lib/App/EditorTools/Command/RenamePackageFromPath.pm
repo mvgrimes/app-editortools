@@ -1,12 +1,14 @@
 package App::EditorTools::Command::RenamePackageFromPath;
 
+# ABSTRACT: Rename the package based on the file's path
+
 use strict;
 use warnings;
 use Path::Class;
 
 use App::EditorTools -command;
 
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 sub opt_spec {
     return ( [ "filename|f=s", "The filename and path of the package", ] );
@@ -41,13 +43,25 @@ sub execute {
 
 1;
 
+__END__
+
+=pod
+
 =head1 NAME
 
-App::EditorTools::Command::RenamePackageFromPath - Rename the Package Based on the Path of the File
+App::EditorTools::Command::RenamePackageFromPath - Rename the package based on the file's path
+
+=head1 VERSION
+
+version 0.18
 
 =head1 DESCRIPTION
 
 See L<App::EditorTools> for documentation.
+
+=head1 NAME
+
+App::EditorTools::Command::RenamePackageFromPath - Rename the Package Based on the Path of the File
 
 =head1 AUTHOR
 
@@ -55,10 +69,9 @@ Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2010 by Mark Grimes
+This software is copyright (c) 2013 by Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.2 or,
-at your option, any later version of Perl 5 you may have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
-
+=cut

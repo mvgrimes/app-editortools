@@ -4,10 +4,10 @@ if exists("b:did_editortools_ftplugin")
 endif
 let b:did_editortools_ftplugin = 1
 
-map <buffer> ,pp :call EditorToolsMenu()<cr>
-map <buffer> ,pL :call RenameVariable()<cr>
-map <buffer> ,pP :call RenamePackageFromPath()<cr>
-map <buffer> ,pI :call IntroduceTemporaryVariable()<cr>
+map <buffer> <leader>pp :call EditorToolsMenu()<cr>
+map <buffer> <leader>pL :call RenameVariable()<cr>
+map <buffer> <leader>pP :call RenamePackageFromPath()<cr>
+map <buffer> <leader>pI :call IntroduceTemporaryVariable()<cr>
 
 function! EditorToolsMenu()
     let list = [ "RenameVariable", "RenamePackageFromPath", "IntroduceTemporaryVariable" ]
@@ -79,21 +79,14 @@ endfunction
 
 " Ovid's function to implement a simple menu
 function! PickFromList( name, list, ... )
-    let forcelist = a:0 && a:1 ? 1 : 0
+    let lines = [ 'Choose a '. a:name . ':' ]
+        \ + map(range(1, len(a:list)), 'v:val .": ". a:list[v:val - 1]')
+    let choice = inputlist(lines) - 1
 
-    if 1 == len(a:list) && !forcelist
-        let choice = 0
+    if ( choice < 0 ) 
+        return ""
     else
-        let lines = [ 'Choose a '. a:name . ':' ]
-            \ + map(range(1, len(a:list)), 'v:val .": ". a:list[v:val - 1]')
-        let choice  = inputlist(lines)
-        if choice > 0 && choice <= len(a:list)
-            let choice = choice - 1
-        else
-            let choice = choice - 1
-        endif
-    end
-
-    return a:list[choice]
+        return a:list[choice]
+    endif
 endfunction
 

@@ -7,7 +7,7 @@ use warnings;
 
 use App::Cmd::Setup -app;
 
-our $VERSION = '0.18';
+our $VERSION = '0.19';
 
 1;
 
@@ -21,7 +21,7 @@ App::EditorTools - Command line tool for Perl code refactoring
 
 =head1 VERSION
 
-version 0.18
+version 0.19
 
 =head1 DESCRIPTION
 
@@ -150,13 +150,38 @@ L<PPIx::EditorTools>, L<Padre>
 Please report any bugs or suggestions at 
 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-EditorTools>
 
+=head1 THANKS
+
+Bug fixes and contributions from:
+
+=over 4
+
+=item *
+
+Shlomi Fish
+
+=item *
+
+Pat Regan (emacs interface)
+
+=item *
+
+lackita (emacs patch)
+
+=item *
+
+mannih (vim patch)
+
+=back
+
+
 =head1 AUTHOR
 
 Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>.
+This software is copyright (c) 2014 by Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

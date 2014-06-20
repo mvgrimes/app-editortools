@@ -1,5 +1,13 @@
 Changes for App::EditorTools
 
+0.19 - Thu Jun 19 22:35:51 EDT 2014
+    Let users choose their own leader key, simplify menu
+    Since not all vim users might like to use the comma as their leader, we
+    can simply use "<leader>" instead of "," when mapping the editor tools
+    commands. (Thanks to mannih for the patch.)
+
+    Updates pod and makes layout more github friendly.
+
 0.18 - Tue Dec 10 12:25:15 EST 2013
     Fixes several problems with the emacs file that's installed. Thankes to
     lackita++ for the patch on github.

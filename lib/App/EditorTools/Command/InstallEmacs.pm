@@ -9,7 +9,7 @@ use parent 'App::EditorTools::CommandBase::Install';
 #use App::EditorTools -command;
 use File::HomeDir;
 
-our $VERSION = '0.18';
+our $VERSION = '0.19';
 
 sub command_names { 'install-emacs' }
 
@@ -73,7 +73,7 @@ App::EditorTools::Command::InstallEmacs - Install emacs bindings for App::Editor
 
 =head1 VERSION
 
-version 0.18
+version 0.19
 
 =head1 SYNOPSIS
 
@@ -120,7 +120,7 @@ Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>.
+This software is copyright (c) 2014 by Mark Grimes, E<lt>mgrimes@cpan.orgE<gt>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

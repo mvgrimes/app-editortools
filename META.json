@@ -46,35 +46,35 @@
    "provides" : {
       "App::EditorTools" : {
          "file" : "lib/App/EditorTools.pm",
-         "version" : "0.18"
+         "version" : "0.19"
       },
       "App::EditorTools::Command::InstallEmacs" : {
          "file" : "lib/App/EditorTools/Command/InstallEmacs.pm",
-         "version" : "0.18"
+         "version" : "0.19"
       },
       "App::EditorTools::Command::InstallVim" : {
          "file" : "lib/App/EditorTools/Command/InstallVim.pm",
-         "version" : "0.18"
+         "version" : "0.19"
       },
       "App::EditorTools::Command::IntroduceTemporaryVariable" : {
          "file" : "lib/App/EditorTools/Command/IntroduceTemporaryVariable.pm",
-         "version" : "0.18"
+         "version" : "0.19"
       },
       "App::EditorTools::Command::RenamePackage" : {
          "file" : "lib/App/EditorTools/Command/RenamePackage.pm",
-         "version" : "0.18"
+         "version" : "0.19"
       },
       "App::EditorTools::Command::RenamePackageFromPath" : {
          "file" : "lib/App/EditorTools/Command/RenamePackageFromPath.pm",
-         "version" : "0.18"
+         "version" : "0.19"
       },
       "App::EditorTools::Command::RenameVariable" : {
          "file" : "lib/App/EditorTools/Command/RenameVariable.pm",
-         "version" : "0.18"
+         "version" : "0.19"
       },
       "App::EditorTools::CommandBase::Install" : {
          "file" : "lib/App/EditorTools/CommandBase/Install.pm",
-         "version" : "0.18"
+         "version" : "0.19"
       }
    },
    "release_status" : "stable",
@@ -89,5 +89,5 @@
          "url" : "http://github.com/mvgrimes/app-editortools"
       }
    },
-   "version" : "0.18"
+   "version" : "0.19"
 }

@@ -4,7 +4,7 @@ App::EditorTools - Command line tool for Perl code refactoring
 
 # VERSION
 
-version 0.18
+version 0.19
 
 # DESCRIPTION
 
@@ -117,13 +117,22 @@ STDIN. The refactored code is output on STDOUT.
 Please report any bugs or suggestions at 
 [http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-EditorTools](http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-EditorTools)
 
+# THANKS
+
+Bug fixes and contributions from:
+
+- Shlomi Fish
+- Pat Regan (emacs interface)
+- lackita (emacs patch)
+- mannih (vim patch)
+
 # AUTHOR
 
 Mark Grimes, <mgrimes@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Mark Grimes, <mgrimes@cpan.org>.
+This software is copyright (c) 2014 by Mark Grimes, <mgrimes@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -93,8 +93,17 @@
     )
 )
 
+(defun editortools-undeclared-region (&optional b e)
+  (interactive "r")
+  (with-output-to-temp-buffer "* ppi undeclared lexicals *"
+    (call-process-region b e "editortools" nil  "* ppi undeclared lexicals *" t "findundeclaredvariables")
+    (pop-to-buffer "* ppi undeclared lexicals *")
+    )
+)
+
 (require 'cperl-mode)
 (define-key cperl-mode-map (kbd "C-c e r") 'editortools-renamevariable)
 (define-key cperl-mode-map (kbd "C-c e t") 'editortools-introducetemporaryvariable)
-
+(define-key cperl-mode-map (kbd "C-c e u") 'editortools-undeclared-region)
+(define-key cperl-mode-map (kbd "C-c e d") 'editortools-dump-region)
 (provide 'editortools)

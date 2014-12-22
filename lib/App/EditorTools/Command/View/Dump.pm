@@ -1,5 +1,6 @@
 package App::EditorTools::Command::View::Dump;
-use strictures 1;
+use warnings;
+use strict;
 
 # ABSTRACT: Dump ppi to stdout
 

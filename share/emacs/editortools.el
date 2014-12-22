@@ -85,6 +85,14 @@
 	(buffer-swap-text buffer)
 	(goto-char p)))
 
+(defun editortools-dump-region (&optional b e)
+  (interactive "r")
+  (with-output-to-temp-buffer "* ppi dump *"
+    (call-process-region b e "editortools" nil  "* ppi dump *" t "dump")
+    (pop-to-buffer "* ppi dump *")
+    )
+)
+
 (require 'cperl-mode)
 (define-key cperl-mode-map (kbd "C-c e r") 'editortools-renamevariable)
 (define-key cperl-mode-map (kbd "C-c e t") 'editortools-introducetemporaryvariable)
